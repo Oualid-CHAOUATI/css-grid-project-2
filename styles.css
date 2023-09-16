@@ -1,0 +1,112 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;600;800&family=VT323&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Poppins";
+  font-size: clamp(14px, 1vw, 24px);
+  max-width: 1800px;
+  margin: auto;
+}
+
+ul,
+li {
+  padding: 0;
+  list-style-type: none;
+}
+
+.capitalize, aside p:nth-child(2) {
+  text-transform: capitalize;
+}
+
+.capitalize-1st-letter::first-letter, aside p:first-child::first-letter {
+  text-transform: uppercase;
+}
+
+.border {
+  border: 1px solid blue;
+  /* border-collapse: collapse; */
+  /* margin: 2em; */
+  padding: 1.7em;
+}
+
+header,
+footer {
+  text-align: center;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+}
+
+nav a {
+  color: inherit;
+}
+
+article .title {
+  font-size: 3em;
+  padding-block: 0.7em;
+  line-height: 1.2;
+}
+article .img-wrapper {
+  aspect-ratio: 1.5;
+}
+article .img-wrapper img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+article p {
+  line-height: 1.4;
+  padding-top: 0.8em;
+}
+article p::first-letter {
+  display: inline-block;
+  font-size: 2em;
+  font-weight: bold;
+  margin-right: 0.1em;
+}
+
+aside,
+article,
+nav {
+  padding-top: 1.7em !important;
+}
+
+nav .title,
+aside li p:first-child {
+  padding-bottom: 0.2em;
+}
+
+aside li:not(:last-child) {
+  padding-bottom: 1em;
+}
+
+@media screen and (min-width: 1300px) {
+  aside,
+  nav {
+    padding-right: 7em !important;
+  }
+}
+@media screen and (max-width: 1200px) {
+  nav {
+    grid-column: span 3;
+  }
+  nav ul {
+    display: flex;
+    -moz-column-gap: 1em;
+         column-gap: 1em;
+    flex-wrap: wrap;
+  }
+}
+@media screen and (max-width: 900px) {
+  aside {
+    grid-column: span 3;
+  }
+}/*# sourceMappingURL=styles.css.map */
